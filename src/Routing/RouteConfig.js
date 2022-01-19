@@ -2,7 +2,7 @@ import React from 'react'
 
 // Content pages
 import HomeScreen from '../Screens/Pages/HomeScreen'
-import AboutScreen from '../Screens/Pages/AboutScreen'
+import ContactScreen from '../Screens/Pages/ContactScreen'
 
 // Error pages
 import PageNotFound from '../Screens/Error/PageNotFound'
@@ -16,8 +16,8 @@ export const RouteConfig = [
                 element: <HomeScreen />
             },
             {
-                path: "/about",
-                element: <AboutScreen />
+                path: "/contact",
+                element: <ContactScreen />
             },
             {
                 path: "*",
