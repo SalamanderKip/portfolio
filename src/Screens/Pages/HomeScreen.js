@@ -1,30 +1,448 @@
 import React from 'react'
 import '../../assets/style.css'
+import { Navbar } from '../../components/Navbar'
 
 const HomeScreen = () => {
     return (
         <>
             <div id="container">
                 <header>
-                    <nav>
-                        <img src="LogoPortfoliow512.png" alt="Logo"></img>
-                        <div>
-                            <ul id="nav">
-                                <li><a href="default.asp">Home</a></li>
-                                <li><a href="news.asp">About</a></li>
-                                <li><a href="contact.asp">Projects</a></li>
-                                <li><a href="about.asp">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+                    <Navbar />
                 </header>
                 <main>
-
+                    <section id="overmij">
+                        <p>
+                            Ik ben Maarten Bos, 18 jaar oud.
+                        </p>
+                    </section>
+                    <section id="projects">
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                        <div className="card-item">
+                            <img className="project1" src="bever.png" alt="Project"></img>
+                            <div className="testt">
+                                <h4>Maarten</h4>
+                                <p>Test</p>
+                            </div>
+                        </div>
+                    </section>
                 </main>
                 <footer id="footer">
                     <h3>designed &amp; build by Maarten Bos</h3>
                 </footer>
             </div>
+
         </>
     )
 }
