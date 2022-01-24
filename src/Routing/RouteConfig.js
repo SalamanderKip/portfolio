@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 // Content pages
 import HomeScreen from '../Screens/Pages/HomeScreen'
