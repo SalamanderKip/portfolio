@@ -13,6 +13,11 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#root:not(:empty) + .center {
+  display: none;
 }
 
 .center {
@@ -128,49 +133,147 @@ body {
 /* Track */
 /* Handle */
 /* Handle on hover */
-#container {
-  width: calc(100% - 220px);
-  height: 2000px;
-  margin: auto;
-  padding: 0;
-  color: #8892b0;
-}
-
-#container header #logo {
+header #logo {
   display: inline-block;
   padding: 15px 0px 0px 15px;
 }
 
-#container header ul {
+header ul {
+  float: right;
   font-size: 30px;
-  display: inline-block;
 }
 
-#container header ul #contact-nav a {
+header ul .item-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+header ul .item-nav a:hover {
+  color: cyan;
+}
+
+header ul #CV-nav a {
   padding: 10px 5px;
   text-decoration: none;
   color: white;
   border: 1px solid white;
 }
 
-#container header ul #contact-nav a:hover {
-  background: cyan;
+header ul #CV-nav a:hover {
+  color: cyan;
 }
 
-#container header ul li {
+header ul li {
   display: inline-block;
+  text-decoration: none;
 }
 
-#container header ul li a {
+header ul li a {
   margin: 0 5px;
   color: white;
 }
 
-#container header ul li a:hover {
-  background: cyan;
+#container {
+  width: calc(100% - 220px);
+  height: auto;
+  margin: auto;
+  padding: 0;
+  color: #8892b0;
 }
 
-main #projects {
+#container *,
+#container ::before,
+#container ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#container main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#container main .introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 60%;
+}
+
+#container main .introduction .intro {
+  font-size: clamp(14px, 5vw, 16px);
+  color: cyan;
+  margin: 0px 0px 10px 4px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+#container main .introduction .name-intro {
+  font-size: clamp(40px, 8vw, 80px);
+  color: white;
+  margin: 0px;
+  line-height: 1.1;
+}
+
+#container main .introduction .about-intro {
+  font-size: clamp(40px, 8vw, 80px);
+  color: #8892b0;
+  margin-top: 10px;
+  line-height: 0.9;
+  width: 100%;
+}
+
+#container main #aboutme {
+  font-size: 20px;
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+#container main #aboutme .main-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, 32px);
+  white-space: nowrap;
+}
+
+#container main #aboutme .main-about::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: grey;
+}
+
+#container main #projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,7 +283,7 @@ main #projects {
           box-sizing: border-box;
 }
 
-main #projects .card-item {
+#container main #projects .card-item {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
@@ -189,23 +292,23 @@ main #projects .card-item {
   margin: 10px;
 }
 
-main #projects .card-item .project1 {
+#container main #projects .card-item .project1 {
   height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
 }
 
-main #projects .card-item:hover {
+#container main #projects .card-item:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(216, 18, 18, 0.2);
           box-shadow: 0 8px 16px 0 rgba(216, 18, 18, 0.2);
 }
 
-main #projects .card-item #testt {
+#container main #projects .card-item #testt {
   padding: 2px 16px;
 }
 
-#footer {
+#container #footer {
   text-align: center;
   background-color: #2E456E;
 }
