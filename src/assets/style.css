@@ -173,6 +173,50 @@ header ul li a {
   color: white;
 }
 
+.socials {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: red;
+}
+
+.socials .socials-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.socials .socials-ul a {
+  padding: 10px;
+}
+
+.socials .socials-ul i {
+  width: 20px;
+  height: 20px;
+}
+
+.socials .socials-ul::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: red;
+}
+
 #container {
   width: calc(100% - 220px);
   height: auto;
@@ -243,9 +287,41 @@ header ul li a {
 }
 
 #container main #aboutme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 60%;
   font-size: 20px;
-  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --font-sans: "Calibre",
+      "Inter",
+      "San Francisco",
+      "SF Pro Text",
+      -apple-system,
+      system-ui,
+      sans-serif;
+  --font-mono: "SF Mono",
+      "Fira Code",
+      "Fira Mono",
+      "Roboto Mono",
+      monospace;
+}
+
+#container main #aboutme .about-picture {
+  width: 300px;
+  height: 300px;
 }
 
 #container main #aboutme .main-about {
@@ -281,6 +357,12 @@ header ul li a {
       flex-wrap: wrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  margin: 0 auto;
+  width: 60%;
 }
 
 #container main #projects .card-item {
@@ -289,7 +371,7 @@ header ul li a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 30%;
-  margin: 10px;
+  margin: 5px 0 10px 10px;
 }
 
 #container main #projects .card-item .project1 {
@@ -300,8 +382,8 @@ header ul li a {
 }
 
 #container main #projects .card-item:hover {
-  -webkit-box-shadow: 0 8px 16px 0 rgba(216, 18, 18, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(216, 18, 18, 0.2);
+  -webkit-box-shadow: 0 8px 16px 0 #2E456E;
+          box-shadow: 0 8px 16px 0 #2E456E;
 }
 
 #container main #projects .card-item #testt {
@@ -310,6 +392,5 @@ header ul li a {
 
 #container #footer {
   text-align: center;
-  background-color: #2E456E;
 }
 /*# sourceMappingURL=style.css.map */

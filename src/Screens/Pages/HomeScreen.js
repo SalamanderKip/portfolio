@@ -8,6 +8,13 @@ const HomeScreen = () => {
             <header>
                 <Navbar />
             </header>
+            <div className='socials'>
+                <ul className='socials-ul'>
+                    <li><a href='https://github.com/SalamanderKipp/' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
+                    <li><a href='https://github.com/SalamanderKipp/' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
+                    <li><a href='https://github.com/SalamanderKipp/' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
             <div id="container">
                 <main>
                     <section className='introduction'>
@@ -21,6 +28,7 @@ const HomeScreen = () => {
                             Ik ben een student en volg de opleiding webdeveloper aan het grafisch lyceum Utrecht.<br></br>
                             Ik zit nu in het 2e studie jaar.<br></br>
                             Ik ben iemand die enthousiast is en goed kan samenwerken. Verder wil ik mezelf altijd verbeteren en mijn kennis vergroten.
+                            <img className="about-picture" src="maartencv.jpg" alt="Project"></img>
                         </p>
                     </section>
                     <section id="projects">

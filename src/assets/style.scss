@@ -176,6 +176,42 @@ header {
   }
 }
 
+.socials {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: red;
+
+  .socials-ul {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+        a {
+      padding: 10px;
+    }
+
+    i {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .socials-ul::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: red;
+  }
+}
 
 #container {
   width: calc(100% - 220px);
@@ -204,12 +240,8 @@ header {
       flex-direction: column;
       align-items: flex-start;
       min-height: 100vh;
-      // padding: 0 150px;
       margin: 0 auto;
       width: 60%;
-      // align-items: center;
-      // text-align: center;
-
 
       .intro {
         font-size: clamp(14px, 5vw, 16px);
@@ -238,9 +270,33 @@ header {
     }
 
     #aboutme {
+      .about-picture {
+        width: 300px;
+        height: 300px;
+      }
+
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0 auto;
+      width: 60%;
       font-size: 20px;
-      --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-      --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      --font-sans: "Calibre",
+      "Inter",
+      "San Francisco",
+      "SF Pro Text",
+      -apple-system,
+      system-ui,
+      sans-serif;
+      --font-mono: "SF Mono",
+      "Fira Code",
+      "Fira Mono",
+      "Roboto Mono",
+      monospace;
 
       .main-about {
         display: flex;
@@ -270,13 +326,18 @@ header {
       display: flex;
       flex-wrap: wrap;
       box-sizing: border-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      align-items: flex-start;
+      margin: 0 auto;
+      width: 60%;
 
       // justify-content: center;
       .card-item {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
         width: 30%;
-        margin: 10px;
+        margin: 5px 0 10px 10px;
 
         .project1 {
           height: 200px;
@@ -285,7 +346,7 @@ header {
         }
 
         &:hover {
-          box-shadow: 0 8px 16px 0 rgba(216, 18, 18, 0.2);
+          box-shadow: 0 8px 16px 0 #2E456E;
         }
 
         #testt {
@@ -297,6 +358,6 @@ header {
 
   #footer {
     text-align: center;
-    background-color: #2E456E;
+    // background: linear-gradient(180deg, rgba(35, 53, 84, 1) 0%, rgba(35, 55, 91, 1) 25%, rgba(46, 69, 110, 1) 63%, rgba(35, 53, 84, 1) 100%);
   }
 }
