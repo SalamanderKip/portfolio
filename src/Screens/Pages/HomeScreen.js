@@ -10,9 +10,9 @@ const HomeScreen = () => {
             </header>
             <div className='socials'>
                 <ul className='socials-ul'>
-                    <li><a href='https://github.com/SalamanderKipp/' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
-                    <li><a href='https://github.com/SalamanderKipp/' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
-                    <li><a href='https://github.com/SalamanderKipp/' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
+                    <li><a href='https://github.com/SalamanderKipp/' title='GitHub' aria-label="GitHub" target="_blank" rel="noreferrer"><i class="fab fa-github socials-general"></i></a></li>
+                    <li><a href='https://www.linkedin.com/in/maarten-bos-7370b71bb/' title='Linkedin' aria-label="Linkedin" target="_blank" rel="noreferrer"><i class="fab fa-linkedin socials-general"></i></a></li>
+                    <li><a href='https://codepen.io/SalamanderKip/' title='Codepen' aria-label="Codepen" target="_blank" rel="noreferrer"><i class="fab fa-codepen socials-general"></i></a></li>
                 </ul>
             </div>
             <div id="container">
@@ -20,9 +20,9 @@ const HomeScreen = () => {
                     <section className='introduction'>
                         <p className='intro'>Hoi, mijn naam is</p>
                         <p className='name-intro'>Maarten Bos.</p>
-                        <p className='about-intro'>Ik doe de opleiding webdevelopment!</p>
+                        <p className='study-intro'>Ik doe de opleiding webdevelopment!</p>
                     </section>
-                    <section id="aboutme">
+                    <section id='aboutme'>
                         <h2 className='main-about'>About Me</h2>
                         <p>
                             Ik ben een student en volg de opleiding webdeveloper aan het grafisch lyceum Utrecht.<br></br>
@@ -32,6 +32,7 @@ const HomeScreen = () => {
                         </p>
                     </section>
                     <section id="projects">
+                        <h2 className='main-project'>Projecten</h2>
                         <div className="card-item">
                             <img className="project1" src="bever.png" alt="Project"></img>
                             <div className="testt">

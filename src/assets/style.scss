@@ -7,7 +7,8 @@ body {
   padding: 0;
   margin: 0;
   // background: rgb(35, 53, 84);
-  background: linear-gradient(180deg, rgba(35, 53, 84, 1) 0%, rgba(35, 55, 91, 1) 25%, rgba(46, 69, 110, 1) 63%, rgba(35, 53, 84, 1) 100%);
+  // background: rgb(35, 53, 84);
+  background: linear-gradient(180deg, rgba(35, 53, 84, 1) 0%, rgba(35, 53, 84, 1) 100%);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -25,7 +26,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: red;
+  background: #ccd6f6;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -108,26 +109,28 @@ body {
 
 /* scroll bar */
 /* width */
-// ::-webkit-scrollbar {
-//     width: 15px;
-//   }
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: rgb(35, 53, 84);
+}
 
 /* Track */
-// ::-webkit-scrollbar-track {
-//   box-shadow: inset 0 0 5px grey; 
-//   border-radius: 10px;
-// }
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(35, 53, 84);
+  ;
+  border-radius: 10px;
+}
 
 /* Handle */
-// ::-webkit-scrollbar-thumb {
-//   background: #6FCDD1; 
-//   border-radius: 10px;
-// }
+::-webkit-scrollbar-thumb {
+  background: #6FCDD1;
+  border-radius: 10px;
+}
 
 /* Handle on hover */
-// ::-webkit-scrollbar-thumb:hover {
-//   background: #32EEF5; 
-// }
+::-webkit-scrollbar-thumb:hover {
+  background: #32EEF5;
+}
 
 header {
   #logo {
@@ -137,12 +140,15 @@ header {
 
   ul {
     float: right;
-    font-size: 30px;
+    font-size: 20px;
 
     .item-nav {
+      padding: 10px 0;
+
       a {
         text-decoration: none;
         color: white;
+        padding: 10px;
 
         &:hover {
           color: cyan;
@@ -152,11 +158,14 @@ header {
     }
 
     #CV-nav {
+      margin-right: 50px;
+
       a {
         padding: 10px 5px;
         text-decoration: none;
         color: white;
         border: 1px solid white;
+        border-radius: 10%;
 
         &:hover {
           color: cyan;
@@ -183,7 +192,13 @@ header {
   left: 40px;
   right: auto;
   z-index: 10;
-  color: red;
+  color: #ccd6f6;
+
+  .socials-general {
+    color: #ccd6f6;
+    font-size: 20px;
+    margin: 15px 0;
+  }
 
   .socials-ul {
     display: flex;
@@ -194,22 +209,32 @@ header {
     padding: 0px;
     list-style: none;
 
-        a {
+    a {
       padding: 10px;
     }
 
     i {
       width: 20px;
       height: 20px;
+
+      &:hover {
+        position: relative;
+        transition-duration: 250ms;
+        transition-delay: 0ms;
+        color: cyan;
+        transition: bottom 2s;
+        bottom: 10;
+      }
     }
   }
+
   .socials-ul::after {
     content: "";
     display: block;
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: red;
+    background-color: #ccd6f6;
   }
 }
 
@@ -260,7 +285,7 @@ header {
         // text-align: center;
       }
 
-      .about-intro {
+      .study-intro {
         font-size: clamp(40px, 8vw, 80px);
         color: #8892b0;
         margin-top: 10px;
@@ -270,6 +295,8 @@ header {
     }
 
     #aboutme {
+      height: fit-content;
+
       .about-picture {
         width: 300px;
         height: 300px;
@@ -281,7 +308,7 @@ header {
       -webkit-box-align: center;
       flex-direction: column;
       align-items: flex-start;
-      min-height: 100vh;
+      min-height: 80vh;
       margin: 0 auto;
       width: 60%;
       font-size: 20px;
@@ -331,6 +358,27 @@ header {
       align-items: flex-start;
       margin: 0 auto;
       width: 60%;
+
+      .main-project {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 10px 0px 40px;
+        width: 100%;
+        font-size: clamp(26px, 5vw, 32px);
+        white-space: nowrap;
+      }
+
+      .main-project::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: -5px;
+        width: 300px;
+        height: 1px;
+        margin-left: 20px;
+        background-color: grey;
+      }
 
       // justify-content: center;
       .card-item {

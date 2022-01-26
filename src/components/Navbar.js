@@ -10,7 +10,7 @@ export const Navbar = () => {
                     <li className="item-nav"><a href="#aboutme">About</a></li>
                     <li className="item-nav"><a href="#projects">Projects</a></li>
                     <li className="item-nav"><a href="/contact">Contact</a></li>
-                    <li id="CV-nav"><a href="/CV_MaartenBos.pdf">CV</a></li>
+                    <li id="CV-nav"><a href="/CV_MaartenBos.pdf" target="_blank">CV</a></li>
                 </ul>
             </div>
         </nav>
