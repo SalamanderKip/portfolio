@@ -20,7 +20,7 @@ const HomeScreen = () => {
                     <section className='introduction'>
                         <p className='intro'>Hoi, mijn naam is</p>
                         <p className='name-intro'>Maarten Bos.</p>
-                        <p className='study-intro'>Ik doe de opleiding webdevelopment!</p>
+                        <p className='study-intro'>Ik doe de opleiding <wbr/> webdevelopment!</p>
                     </section>
                     <section id='aboutme'>
                         <h2 className='main-about'>About Me</h2>

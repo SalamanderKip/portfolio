@@ -197,12 +197,10 @@ header {
   .socials-general {
     color: #ccd6f6;
     font-size: 20px;
-    margin: 15px 0;
+    margin: 25px 0;
   }
 
   .socials-ul {
-    display: flex;
-    flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
     margin: 0px;
@@ -216,14 +214,16 @@ header {
     i {
       width: 20px;
       height: 20px;
-
+      transition: .3s;
+      position: absolute;
+      margin: 10px 0;
       &:hover {
-        position: relative;
-        transition-duration: 250ms;
-        transition-delay: 0ms;
+
+        // transition-duration: 250ms;
+        // transition-delay: 0ms;
+        margin-top: 5px;
         color: cyan;
-        transition: bottom 2s;
-        bottom: 10;
+        // bottom: -10px;
       }
     }
   }
