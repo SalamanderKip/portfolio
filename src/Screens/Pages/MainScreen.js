@@ -43,50 +43,8 @@ class MainScreen extends Component {
                         <section id="projects">
                             <h2 className='main-project'>Projecten</h2>
                             <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
                                 <div className="testt">
-                                    <h4>Maarten</h4>
-                                    <p>Test</p>
-                                </div>
-                            </div>
-                            <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
-                                <div className="testt">
-                                    <h4>Maarten</h4>
-                                    <p>Test</p>
-                                </div>
-                            </div>
-                            <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
-                                <div className="testt">
-                                    <h4>Maarten</h4>
-                                    <p>Test</p>
-                                </div>
-                            </div>
-                            <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
-                                <div className="testt">
-                                    <h4>Maarten</h4>
-                                    <p>Test</p>
-                                </div>
-                            </div>
-                            <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
-                                <div className="testt">
-                                    <h4>Maarten</h4>
-                                    <p>Test</p>
-                                </div>
-                            </div>
-                            <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
-                                <div className="testt">
-                                    <h4>Maarten</h4>
-                                    <p>Test</p>
-                                </div>
-                            </div>
-                            <div className="card-item">
-                                <img className="project1" src="bever.png" alt="Project"></img>
-                                <div className="testt">
+                                    <i class="fas fa-external-link-alt"></i>
                                     <h4>Maarten</h4>
                                     <p>Test</p>
                                 </div>
