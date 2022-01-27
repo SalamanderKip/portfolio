@@ -30,8 +30,8 @@ class Navbar extends Component {
                     <ul>
                         <li className="item-nav"><NavLink to="/">Home</NavLink></li>
                         <li className="item-nav"><NavLink to="/contact">Contact</NavLink></li>
-                        <li className="item-nav"><Link to="/#aboutme">About</Link></li>
-                        <li className="item-nav"><Link to="/#projects">Projects</Link></li>
+                        <li className="item-nav"><Link to="#aboutme">About</Link></li>
+                        <li className="item-nav"><Link to="#projects">Projects</Link></li>
                         <li id="CV-nav"><a href="/CV_MaartenBos.pdf" target="_blank">CV</a></li>
                     </ul>
                 </nav>
