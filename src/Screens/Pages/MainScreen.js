@@ -1,25 +1,27 @@
-import React, { Component } from "react";
-
+import React, { useEffect, useState } from 'react';
 // import '../../assets/style.css'
 // import { Navbar } from '../../components/Navbar'
 
-function connection() {
-    fetch(`http://localhost:3001/projects/`, { method: 'GET' })
-        .then(response => response.json())
-        .then(response => {
-            // const obj = JSON.parse(response)
-            console.log(response)
-            jsonLoop(response)
-        })
-}
-
-function jsonLoop(response) {
-    for (let i = 0; i < response.length; i++) {
-        return response[i].title;
-    }
-}
 
 const MainScreen = () => {
+    const [projects, setProjects] = useState([]);
+
+    // the function wich fetches the data from the api
+    const GetData = async () => {
+        const response = await fetch(
+            'http://localhost:3001/projects'
+        );
+
+        const data = await response.json();
+        // console.log(data)
+
+        // sets the data in a variable so it can be acces for the map()
+        setProjects(data);
+    };
+
+    useEffect(() => {
+        GetData();
+    }, []);
     return (
         <>
             <div className='socials'>
@@ -51,14 +53,17 @@ const MainScreen = () => {
                     </section>
                     <section id="projects">
                         <h2 className='main-project'>projecten</h2>
-                        { }
-                        <div className="card-item">
-                            <div className="testt">
-                                <i className="fas fa-external-link-alt"></i>
-                                <h4>{connection()}</h4>
-                                <p>Test</p>
-                            </div>
-                        </div>
+                        {projects.map((project) => {
+                            return (
+                                <div className="card-item" key= {project.id}>
+                                    <div className="testt">
+                                        <i className="fas fa-external-link-alt"></i>
+                                        <h4>{project.title}</h4>
+                                        <p>{project.dessc}</p>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </section>
                 </main>
                 <footer id="footer">
