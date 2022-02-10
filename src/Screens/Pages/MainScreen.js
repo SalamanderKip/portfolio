@@ -7,9 +7,14 @@ const MainScreen = () => {
     const [projects, setProjects] = useState([]);
 
     // the function wich fetches the data from the api
-    const GetData = async () => {
+    const getData = async (language) => {
+        let url = 'http://localhost:3001/projects';
+        if (language) {
+            url += '?language=' + language;
+        }
+
         const response = await fetch(
-            'http://localhost:3001/projects'
+            url
         );
 
         const data = await response.json();
@@ -20,7 +25,7 @@ const MainScreen = () => {
     };
 
     useEffect(() => {
-        GetData();
+        getData();
     }, []);
     return (
         <>
@@ -39,7 +44,7 @@ const MainScreen = () => {
                         <p className='study-intro'>Ik doe de opleiding <wbr /> webdevelopment!</p>
                     </section>
                     <section id='aboutme'>
-                        <h2 className='main-about'>About Me</h2>
+                        <h2 className='main-about'>Wie ben ik</h2>
                         <div className='aboutme-wrapper'>
                             <div>
                                 Ik ben een student en volg de opleiding webdeveloper aan het grafisch lyceum Utrecht.<br></br>
@@ -53,6 +58,9 @@ const MainScreen = () => {
                     </section>
                     <section id="projects">
                         <h2 className='main-project'>projecten</h2>
+                        <button onClick={() => getData()}>All</button>
+                        <button onClick={() => getData('PHP')}>PHP</button>
+                        <button onClick={() => getData('Javascript')}>Javascript</button>
                         {projects.map((project) => {
                             return (
                                 <div className="card-item" key= {project.id}>
