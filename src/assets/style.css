@@ -166,55 +166,7 @@ body {
 #logo {
   display: inline-block;
   padding: 15px 0px 0px 15px;
-}
-
-nav ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  float: right;
-  font-size: 20px;
-}
-
-nav ul .item-nav {
-  padding: 10px 0;
-}
-
-nav ul .item-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-}
-
-nav ul .item-nav a:hover {
-  color: cyan;
-}
-
-nav ul .item-nav #CV-nav {
-  margin-right: 50px;
-}
-
-nav ul .item-nav #CV-nav a {
-  padding: 10px 5px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  border-radius: 10%;
-}
-
-nav ul .item-nav #CV-nav a:hover {
-  color: cyan;
-}
-
-nav ul .item-nav li {
-  display: inline-block;
-  text-decoration: none;
-}
-
-nav ul .item-nav li a {
-  margin: 0 5px;
-  color: white;
+  width: 275px;
 }
 
 .socials {
@@ -485,5 +437,99 @@ nav ul .item-nav li a {
 
 #container #footer {
   text-align: center;
+}
+
+#mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mobile-menu-opener {
+  display: block;
+}
+
+#mobile-menu-opener.opened {
+  color: lime;
+}
+
+#mobile-menu-opener.closed {
+  color: red;
+}
+
+@media screen and (min-width: 786px) {
+  #mobile-menu-opener {
+    display: none;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: none;
+  float: right;
+  font-size: 20px;
+}
+
+nav ul.opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav ul.closed {
+  display: none;
+}
+
+@media screen and (min-width: 786px) {
+  nav ul.opened, nav ul.closed {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+nav ul .item-nav {
+  padding: 10px 0;
+  display: block;
+}
+
+nav ul .item-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+nav ul .item-nav a:hover {
+  color: cyan;
+}
+
+nav ul .item-nav #CV-nav {
+  margin-right: 50px;
+}
+
+nav ul .item-nav #CV-nav a {
+  padding: 10px 5px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10%;
+}
+
+nav ul .item-nav #CV-nav a:hover {
+  color: cyan;
+}
+
+nav ul .item-nav li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav ul .item-nav li a {
+  margin: 0 5px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

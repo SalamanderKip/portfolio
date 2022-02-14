@@ -144,57 +144,7 @@ body {
 #logo {
   display: inline-block;
   padding: 15px 0px 0px 15px;
-}
-
-nav {
-
-  ul {
-    list-style: none;
-    display: flex;
-    float: right;
-    font-size: 20px;
-
-    .item-nav {
-      padding: 10px 0;
-
-      a {
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-
-        &:hover {
-          color: cyan;
-        }
-      }
-
-
-      #CV-nav {
-        margin-right: 50px;
-
-        a {
-          padding: 10px 5px;
-          text-decoration: none;
-          color: white;
-          border: 1px solid white;
-          border-radius: 10%;
-
-          &:hover {
-            color: cyan;
-          }
-        }
-      }
-
-      li {
-        display: inline-block;
-        text-decoration: none;
-
-        a {
-          margin: 0 5px;
-          color: white;
-        }
-      }
-    }
-  }
+  width: min(275px, 400px);
 }
 
 .socials {
@@ -428,5 +378,94 @@ nav {
   #footer {
     text-align: center;
     // background: linear-gradient(180deg, rgba(35, 53, 84, 1) 0%, rgba(35, 55, 91, 1) 25%, rgba(46, 69, 110, 1) 63%, rgba(35, 53, 84, 1) 100%);
+  }
+}
+
+#mobile-menu {
+  display: flex;
+}
+
+#mobile-menu-opener {
+  display: block;
+
+  &.opened {
+    color: lime;
+  }
+
+  &.closed {
+    color: red;
+  }
+
+  @media screen and (min-width: 786px) {
+    display: none;
+  }
+}
+
+nav {
+
+  ul {
+    list-style: none;
+    display: none;
+    float: right;
+    font-size: 20px;
+
+    &.opened {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.closed {
+      display: none;
+    }
+
+    @media screen and (min-width: 786px) {
+
+      &.opened,
+      &.closed {
+        display: flex !important;
+      }
+    }
+
+    .item-nav {
+      padding: 10px 0;
+      display: block;
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+
+        &:hover {
+          color: cyan;
+        }
+      }
+
+
+      #CV-nav {
+        margin-right: 50px;
+
+        a {
+          padding: 10px 5px;
+          text-decoration: none;
+          color: white;
+          border: 1px solid white;
+          border-radius: 10%;
+
+          &:hover {
+            color: cyan;
+          }
+        }
+      }
+
+      li {
+        display: inline-block;
+        text-decoration: none;
+
+        a {
+          margin: 0 5px;
+          color: white;
+        }
+      }
+    }
   }
 }
