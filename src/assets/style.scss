@@ -236,6 +236,7 @@ body {
       align-items: flex-start;
       min-height: 100vh;
       margin: 0 auto;
+      margin: 0 10%;
       width: 60%;
 
       .intro {
@@ -265,14 +266,13 @@ body {
     }
 
     #aboutme {
-      height: fit-content;
-
       .about-picture {
         width: 300px;
         height: 300px;
         padding-left: 20px;
       }
 
+      height: fit-content;
       display: flex;
       -webkit-box-pack: center;
       justify-content: center;
@@ -281,6 +281,7 @@ body {
       align-items: flex-start;
       min-height: 80vh;
       margin: 0 auto;
+      margin: 0 10%;
       width: 60%;
       font-size: 20px;
       --font-sans: "Calibre",
@@ -399,6 +400,7 @@ body {
   @media screen and (min-width: 786px) {
     display: none;
   }
+
 }
 
 nav {
@@ -426,6 +428,8 @@ nav {
       }
     }
 
+
+
     .item-nav {
       padding: 10px 0;
       display: block;
@@ -440,23 +444,6 @@ nav {
         }
       }
 
-
-      #CV-nav {
-        margin-right: 50px;
-
-        a {
-          padding: 10px 5px;
-          text-decoration: none;
-          color: white;
-          border: 1px solid white;
-          border-radius: 10%;
-
-          &:hover {
-            color: cyan;
-          }
-        }
-      }
-
       li {
         display: inline-block;
         text-decoration: none;
@@ -467,5 +454,66 @@ nav {
         }
       }
     }
+  }
+}
+
+.CV-nav {
+  padding: 10px 5px;
+
+
+  border: 1px solid white;
+  border-radius: 10% 18%;
+  text-align: center;
+  margin: 10px 0;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    color: cyan;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .socials {
+    display: none;
+  }
+
+  .socials-ul {
+    display: none;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  .introduction {
+    width: 90%;
+    margin: 0 10%;
+  }
+
+  .aboutme {
+    width: 90%;
+    margin: 0 10%;
+  }
+
+  .aboutme-wrapper {
+    display: block;
+    // padding-left: 20px;
+  }
+  .about-picture {
+    padding-left: 0 ;
+  }
+}
+
+@media screen and (max-width: 1490px) {
+  .aboutme-wrapper {
+    display: block;
+    
+  }
+  .about-picture {
+    padding-left: 0 !important;
   }
 }

@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 import {
     Route,
+    BrowserRouter,
     Routes,
     NavLink,
     HashRouter
@@ -10,6 +11,7 @@ import {
 import { HashLink as Link } from 'react-router-hash-link';
 import ContactScreen from '../Screens/Pages/ContactScreen';
 import MainScreen from '../Screens/Pages/MainScreen';
+import logo from '../assets/img/LogoPortfoliow512.png';
 
 // export const Navbar = () => {
 //     return (
@@ -31,9 +33,9 @@ const Navbar = () => {
     console.log(navToggle);
     return (
         <>
-            <HashRouter>
+            <BrowserRouter>
                 <nav>
-                    <img id='logo' src='LogoPortfoliow512.png' alt='Logo'></img>
+                    <img id='logo' src={logo} alt='Logo'></img>
                     <div id='mobile-menu'>
                         <a id='mobile-menu-opener' className={navToggle ? 'opened' : 'closed'} onClick={() => setNavToggle(navToggle ? false : true)}>menu</a>
                         <ul className={navToggle ? 'opened' : 'closed'}>
@@ -41,8 +43,6 @@ const Navbar = () => {
                             <li className='item-nav'><NavLink to='/contact'>Contact</NavLink></li>
                             <li className='item-nav'><Link to='/#aboutme'>About</Link></li>
                             <li className='item-nav'><Link to='/#projects'>Projects</Link></li>
-                            {/* <li id='CV-nav'><a href='/CV_MaartenBos.pdf' target='_blank'>CV</a></li> */}
-
                         </ul>
                     </div>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                         <Route path='/contact' element={<ContactScreen />} />
                     </Routes>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         </>
     );
 };

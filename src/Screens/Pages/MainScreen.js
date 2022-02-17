@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import images from '../../assets/img/foto.png';
+
 // import '../../assets/style.css'
 // import { Navbar } from '../../components/Navbar'
 
@@ -8,7 +10,7 @@ const MainScreen = () => {
 
     // the function wich fetches the data from the api
     const getData = async (language) => {
-        let url = 'http://localhost:3001/projects';
+        let url = 'https://bosmaarten.nl/api/projects';
         if (language) {
             url += '?language=' + language;
         }
@@ -51,13 +53,17 @@ const MainScreen = () => {
                                 Ik zit nu in het 2e studie jaar.<br></br>
                                 Ik ben iemand die enthousiast is en goed kan samenwerken. Verder wil ik mezelf altijd verbeteren en mijn kennis vergroten.
                             </div>
+                            <div className='CV-nav'>
+                            <a href='/CV_MaartenBos.pdf' target='_blank'>Bekijk mijn CV</a>
+                            </div>
                             <div>
-                                <img className="about-picture" src="maartencv.jpg" alt="Project"></img>
+                                <img className="about-picture" src={images} alt="Project"></img>
                             </div>
                         </div>
                     </section>
                     <section id="projects">
-                        <h2 className='main-project'>projecten</h2>
+                    <h2 className='main-project'>Projecten </h2>
+                        <h2 className='main-project'>Projecten</h2>
                         <button onClick={() => getData()}>All</button>
                         <button onClick={() => getData('PHP')}>PHP</button>
                         <button onClick={() => getData('Javascript')}>Javascript</button>

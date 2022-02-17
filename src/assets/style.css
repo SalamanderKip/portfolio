@@ -276,6 +276,7 @@ body {
           align-items: flex-start;
   min-height: 100vh;
   margin: 0 auto;
+  margin: 0 10%;
   width: 60%;
 }
 
@@ -322,6 +323,7 @@ body {
           align-items: flex-start;
   min-height: 80vh;
   margin: 0 auto;
+  margin: 0 10%;
   width: 60%;
   font-size: 20px;
   --font-sans: "Calibre",
@@ -507,22 +509,6 @@ nav ul .item-nav a:hover {
   color: cyan;
 }
 
-nav ul .item-nav #CV-nav {
-  margin-right: 50px;
-}
-
-nav ul .item-nav #CV-nav a {
-  padding: 10px 5px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  border-radius: 10%;
-}
-
-nav ul .item-nav #CV-nav a:hover {
-  color: cyan;
-}
-
 nav ul .item-nav li {
   display: inline-block;
   text-decoration: none;
@@ -531,5 +517,57 @@ nav ul .item-nav li {
 nav ul .item-nav li a {
   margin: 0 5px;
   color: white;
+}
+
+.CV-nav {
+  padding: 10px 5px;
+  border: 1px solid white;
+  border-radius: 10% 18%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.CV-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.CV-nav:hover {
+  color: cyan;
+}
+
+@media screen and (max-width: 786px) {
+  .socials {
+    display: none;
+  }
+  .socials-ul {
+    display: none;
+  }
+  #container {
+    width: 100%;
+  }
+  .introduction {
+    width: 90%;
+    margin: 0 10%;
+  }
+  .aboutme {
+    width: 90%;
+    margin: 0 10%;
+  }
+  .aboutme-wrapper {
+    display: block;
+  }
+  .about-picture {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 1490px) {
+  .aboutme-wrapper {
+    display: block;
+  }
+  .about-picture {
+    padding-left: 0 !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
