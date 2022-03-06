@@ -21,9 +21,7 @@ body {
 }
 
 .aboutme-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 #root:not(:empty) + .center {
@@ -522,9 +520,10 @@ nav ul .item-nav li a {
 .CV-nav {
   padding: 10px 5px;
   border: 1px solid white;
-  border-radius: 10% 18%;
+  border-radius: 10px;
   text-align: center;
   margin: 10px 0;
+  max-width: 350px;
 }
 
 .CV-nav a {
@@ -563,9 +562,6 @@ nav ul .item-nav li a {
 }
 
 @media screen and (max-width: 1490px) {
-  .aboutme-wrapper {
-    display: block;
-  }
   .about-picture {
     padding-left: 0 !important;
   }

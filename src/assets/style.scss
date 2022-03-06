@@ -23,7 +23,7 @@ body {
 }
 
 .aboutme-wrapper {
-  display: flex;
+  display: block;
 }
 
 #root:not(:empty)+.center {
@@ -320,7 +320,7 @@ body {
       }
     }
 
-    #projects {
+    .projects {
       // max-width: 200px;
       display: flex;
       flex-wrap: wrap;
@@ -329,7 +329,7 @@ body {
       -webkit-box-align: center;
       align-items: flex-start;
       margin: 0 auto;
-      width: 60%;
+      // width: ;
 
       .main-project {
         display: flex;
@@ -420,13 +420,7 @@ nav {
       display: none;
     }
 
-    @media screen and (min-width: 786px) {
 
-      &.opened,
-      &.closed {
-        display: flex !important;
-      }
-    }
 
 
 
@@ -457,26 +451,56 @@ nav {
   }
 }
 
-.CV-nav {
-  padding: 10px 5px;
+.socials-f-mobile {
+  display: none;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
 
 
-  border: 1px solid white;
-  border-radius: 10% 18%;
-  text-align: center;
-  margin: 10px 0;
+@media screen and (min-width: 786px) {
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  &:hover {
-    color: cyan;
+  &.opened,
+  &.closed {
+    display: flex !important;
   }
 }
 
 @media screen and (max-width: 786px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .socials-f-mobile {
+    display: inline-flex;
+    // padding: 0px;
+    list-style: none;
+    // margin: 0px;
+    font-size: 25px;
+
+
+    li {
+      margin: 10px;
+
+      a {
+        color: white;
+      }
+
+    }
+
+    a:hover {
+      color: cyan;
+    }
+  }
+
+
   .socials {
     display: none;
   }
@@ -503,17 +527,32 @@ nav {
     display: block;
     // padding-left: 20px;
   }
+
   .about-picture {
-    padding-left: 0 ;
+    padding-left: 0;
   }
 }
 
 @media screen and (max-width: 1490px) {
-  .aboutme-wrapper {
-    display: block;
-    
-  }
   .about-picture {
     padding-left: 0 !important;
+  }
+}
+
+.CV-nav {
+  padding: 10px 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 0;
+  max-width: 350px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    color: cyan;
   }
 }
