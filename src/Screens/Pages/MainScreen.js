@@ -6,10 +6,13 @@ import { Socials } from '../../components/socials/Socials';
 const MainScreen = () => {
     const [projects, setProjects] = useState([]);
     const [example, setExample] = useState(false);
+    const [projectInfo, setProjectInfo] = useState({});
+    const [currentProj, setCurrentProj] = useState(1);
 
     // the function wich fetches the data from the api
     const getData = async (language) => {
         let url = 'https://bosmaarten.nl/api/projects';
+        let url2 = 'https://bosmaarten.nl/api/projects-content';
         if (language) {
             url += '?language=' + language;
         }
@@ -17,11 +20,27 @@ const MainScreen = () => {
         const response = await fetch(
             url
         );
+        const response2 = await fetch(
+            url2
+        );
 
         const data = await response.json();
+        const data2 = await response2.json();
+
+        let tempProjData = {}
+        data.forEach(proj => {
+            tempProjData[proj.id] = proj;
+        })
+
+        data2.forEach(proj => {
+            for (const [key, value] of Object.entries(proj)) {
+                if (!tempProjData[proj.id][key]) { tempProjData[proj.id][key] = value };
+            }
+        })
         // console.log(data)
 
         // sets the data in a variable so it can be acces for the map()
+        setProjectInfo(tempProjData);
         setProjects(data);
     };
 
@@ -33,7 +52,11 @@ const MainScreen = () => {
         getData();
     }, []);
 
-    
+    const setModal = async (projectId) => {
+        setExample(true);
+        setCurrentProj(projectId);
+    }
+
     return (
         <>
 
@@ -86,15 +109,13 @@ const MainScreen = () => {
                         <h2 className='main-project'>Projecten </h2>
                         {projects.map((project) => {
                             return (
-                                <>
-                                    <div onClick={() => setExample(true)} data-modal-toggle={project.id} data-projectname={project.title} className='card-item' key={project.id}>
-                                        <div className='testt'>
-                                            <i className='fas fa-external-link-alt'></i>
-                                            <h4>{project.title}</h4>
-                                            <p>{project.dessc}</p>
-                                        </div>
+                                <div onClick={() => setModal(project.id)} data-modal-toggle={project.id} data-projectname={project.title} className='card-item' key={project.id}>
+                                    <div className='testt'>
+                                        <i className='fas fa-external-link-alt'></i>
+                                        <h4>{project.title}</h4>
+                                        <p>{project.dessc}</p>
                                     </div>
-                                </>
+                                </div>
                             )
                         })}
                     </section>
@@ -106,7 +127,7 @@ const MainScreen = () => {
 
                                 <div className="flex justify-between items-start p-5 rounded-t border-b dark:border-gray-600">
                                     <h3 className="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
-                                        {project.id}
+                                        {projectInfo[currentProj]?.title}
                                     </h3>
                                     <button onClick={() => setExample(false)} type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
@@ -115,10 +136,10 @@ const MainScreen = () => {
 
                                 <div className="p-6 space-y-6">
                                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                                        {projectInfo[currentProj]?.description_nl}
                                     </p>
                                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        The European Unions General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                                        {projectInfo[currentProj]?.description_en}
                                     </p>
                                 </div>
 
