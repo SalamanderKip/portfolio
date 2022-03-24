@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useState } from 'react';
-import images from '../../assets/img/foto.png';
+import images from '../../assets/img/ditbenik2.png';
 import { Footer } from '../../components/footer/Footer';
 import { Socials } from '../../components/socials/Socials';
 
@@ -17,36 +17,24 @@ const MainScreen = () => {
             url += '?language=' + language;
         }
 
-        const response = await fetch(
-            url
-        );
-        const response2 = await fetch(
-            url2
-        );
+        let response;
+        let response2;
+        await Promise.all([
+            fetch(url).then(resp => response = resp),
+            fetch(url2).then(resp => response2 = resp)
+        ]);
 
-        const data = await response.json();
+        const data1 = await response.json();
         const data2 = await response2.json();
 
-        let tempProjData = {}
-        data.forEach(proj => {
-            tempProjData[proj.id] = proj;
-        })
+        let tempProjData = mergeData(data1, data2);
 
-        data2.forEach(proj => {
-            for (const [key, value] of Object.entries(proj)) {
-                if (!tempProjData[proj.id][key]) { tempProjData[proj.id][key] = value };
-            }
-        })
-        // console.log(data)
+        console.log('data', tempProjData);
 
         // sets the data in a variable so it can be acces for the map()
         setProjectInfo(tempProjData);
-        setProjects(data);
+        setProjects(data1);
     };
-
-    // const readData = (e) => {
-    //     getData(e);
-    // };
 
     useLayoutEffect(() => {
         getData();
@@ -158,3 +146,24 @@ const MainScreen = () => {
 }
 
 export default MainScreen
+
+function mergeData(data1, data2) {
+    let mergedData = {};
+    data1.forEach(proj => {
+        mergedData[proj.id] = proj;
+    });
+
+    data2.forEach(projData2 => {
+        const projData1 = mergedData[projData2.id];
+        if (projData1) {
+            mergedData[projData2.id] = {
+                ...projData2,
+                ...projData1
+            };
+        } else {
+            mergedData[projData2.id] = projData2;
+        }
+    });
+    return mergedData;
+}
+
