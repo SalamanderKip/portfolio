@@ -108,7 +108,7 @@ const MainScreen = () => {
                         })}
                     </section>
 
-                    <div data-projectname aria-hidden="true" className={`${example ? '' : 'hidden'} overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0`}>
+                    <div data-projectname aria-hidden="true" className={`${example ? '' : 'hidden'} overflow-y-auto overflow-x-hidden mainProject fixed in justify-center items-center h-modal md:h-full md:inset-0`}>
                         <div className="relative px-4 w-full max-w-2xl h-full md:h-auto">
 
                             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
