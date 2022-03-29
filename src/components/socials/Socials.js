@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../assets/socials.scss'
 
 export const Socials = () => {
     return (

@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import images from '../../assets/img/ditbenik2.png';
 import { Footer } from '../../components/footer/Footer';
 import { Socials } from '../../components/socials/Socials';
+import { EmailSocials } from '../../components/socials/EmailSocials';
 
 const MainScreen = () => {
     const [projects, setProjects] = useState([]);
@@ -49,6 +50,7 @@ const MainScreen = () => {
         <>
 
             <Socials />
+            <EmailSocials />
             <div id='container'>
                 <main>
                     <section className='introduction'>
@@ -71,30 +73,12 @@ const MainScreen = () => {
                         <img className='about-picture' src={images} alt='Project'></img>
                     </section>
                     <section className='projects'>
-                        <button onClick={() => getData()}>All</button>
-                        <button onClick={() => getData('PHP')}>PHP</button>
-                        <button onClick={() => getData('Javascript')}>Javascript</button>
-                        <h2 className='main-project'>Projecten </h2>
-                        {/* <div className='parent'> */}
-                        {projects.map((project) => {
-                            return (
-                                <div className='card-item' key={project.id}>
-                                    <div className='testt'>
-                                        <i className='fas fa-external-link-alt'></i>
-                                        <h4>{project.title}</h4>
-                                        <p>{project.dessc}</p>
-                                    </div>
-                                </div>
-                            )
-                        })}
-
-                        {/* </div> */}
-                    </section>
-
-
-
-                    <section className='projects'>
-                        <h2 className='main-project'>Projecten </h2>
+                        <h2 className='main-project'>Projecten 2</h2>
+                        <div className='sortButtons'>
+                            <button onClick={() => getData()}>All</button>
+                            <button onClick={() => getData('PHP')}>PHP</button>
+                            <button onClick={() => getData('Javascript')}>Javascript</button>
+                        </div>
                         {projects.map((project) => {
                             return (
                                 <div onClick={() => setModal(project.id)} data-modal-toggle={project.id} data-projectname={project.title} className='card-item' key={project.id}>
@@ -108,7 +92,7 @@ const MainScreen = () => {
                         })}
                     </section>
 
-                    <div data-projectname aria-hidden="true" className={`${example ? '' : 'hidden'} overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0`}>
+                    <div data-projectname aria-hidden="true" className={`${example ? '' : 'hidden'} overflow-y-auto overflow-x-hidden fixed mainProject justify-center items-center h-modal md:h-full md:inset-0`}>
                         <div className="relative px-4 w-full max-w-2xl h-full md:h-auto">
 
                             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
