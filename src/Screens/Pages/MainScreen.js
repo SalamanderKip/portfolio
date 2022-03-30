@@ -72,12 +72,12 @@ const MainScreen = () => {
                         </div>
                         <img className='about-picture' src={images} alt='Project'></img>
                     </section>
-                    <section className='projects'>
+                    <section id='projects' className='projects'>
                         <h2 className='main-project'>Projecten 2</h2>
-                        <div className='sortButtons'>
-                            <button onClick={() => getData()}>All</button>
-                            <button onClick={() => getData('PHP')}>PHP</button>
-                            <button onClick={() => getData('Javascript')}>Javascript</button>
+                        <div >
+                            <button className='sortButtons' onClick={() => getData()}>All</button>
+                            <button className='sortButtons' onClick={() => getData('PHP')}>PHP</button>
+                            <button className='sortButtons' onClick={() => getData('Javascript')}>Javascript</button>
                         </div>
                         {projects.map((project) => {
                             return (
