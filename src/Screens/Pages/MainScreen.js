@@ -77,7 +77,7 @@ const MainScreen = () => {
                         </div>
                         <img className='about-picture' src={images} alt='Project'></img>
                     </section>
-                    <h2 className='main-project'>Projecten 2</h2>
+                    <h2 className='main-project'>Projecten</h2>
                     <div className='sortButtons'>
                         <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded sortButtons-main' onClick={() => getData()}>All</button>
                         <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded sortButtons-main' onClick={() => getData('PHP')}>PHP</button>
