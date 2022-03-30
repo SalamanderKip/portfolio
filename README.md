@@ -1,1 +1,3 @@
-# ReactJS template with routing
+# Portfolio in react
+# npm i
+# npm run start

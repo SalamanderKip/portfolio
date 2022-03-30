@@ -78,10 +78,10 @@ const MainScreen = () => {
                         <img className='about-picture' src={images} alt='Project'></img>
                     </section>
                     <h2 className='main-project'>Projecten 2</h2>
-                    <div >
-                        <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded' onClick={() => getData()}>All</button>
-                        <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded' onClick={() => getData('PHP')}>PHP</button>
-                        <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded' onClick={() => getData('Javascript')}>Javascript</button>
+                    <div className='sortButtons'>
+                        <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded sortButtons-main' onClick={() => getData()}>All</button>
+                        <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded sortButtons-main' onClick={() => getData('PHP')}>PHP</button>
+                        <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded sortButtons-main' onClick={() => getData('Javascript')}>Javascript</button>
                     </div>
                     <section id='projects' className='grid md:grid-cols-3 gap-4 grid-cols-1 projects'>
 
@@ -120,10 +120,13 @@ const MainScreen = () => {
                                         {projectInfo[currentProj]?.description_nl}
                                     </p>
                                     <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        {projectInfo[currentProj]?.repo_link}
+                                        <a href={projectInfo[currentProj]?.repo_link} rel="noreferrer" target="_blank">{projectInfo[currentProj]?.repo_link}</a>
                                     </p>
-                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        {projectInfo[currentProj]?.project_link}
+                                    <p className="">
+                                        <a href={projectInfo[currentProj]?.project_link} rel="noreferrer" target="_blank">{projectInfo[currentProj]?.project_link}</a>
+                                    </p>
+                                    <p className="">
+                                        {projectInfo[currentProj]?.language}
                                     </p>
                                 </div>
 

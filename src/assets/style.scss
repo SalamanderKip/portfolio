@@ -1,5 +1,3 @@
-
-
 :root {
   --color01: 242f3f;
 }
@@ -291,6 +289,7 @@ body {
 
 
       .card-item {
+        margin-top: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
 
@@ -364,6 +363,8 @@ body {
 
 }
 
+
+
 #mobile-list {
   list-style: none;
   display: none;
@@ -381,18 +382,26 @@ body {
   &.closed {
     display: none;
   }
-  li {
-    padding: 5px;
 
-    &:first-child {
-      padding-top: 0!important;
-    }
+  gap: 10px;
+
+  @media screen and (min-width: 786px) {
+    display: inline-flex !important;
+    width: fit-content;
+  }
+}
+
+#alt-nav {
+  display: inline-flex;
+  
+  @media screen and (max-width: 786px) {
+    width: calc(100vw - 30px);
   }
 }
 
 #main-nav {
   padding: 15px 15px 0;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: baseline;
 
@@ -409,16 +418,9 @@ body {
         color: #64ffda;
       }
     }
-
-    li {
-      display: inline-block;
-      text-decoration: none;
-
-      a {
-        margin: 0 5px;
-        color: white;
-      }
-    }
+  }
+  @media screen and (max-width: 786px) {
+      width: calc(100vw - 30px) ;
   }
 }
 
@@ -434,37 +436,6 @@ body {
 }
 
 @media screen and (max-width: 786px) {
-
-  .socials-f-mobile {
-    display: inline-flex;
-    // padding: 0px;
-    list-style: none;
-    // margin: 0px;
-    font-size: 25px;
-
-
-    li {
-      margin: 10px;
-
-      a {
-        color: white;
-      }
-
-    }
-
-    a:hover {
-      color: #64ffda;
-    }
-  }
-
-
-  .socials {
-    display: none;
-  }
-
-  .socials-ul {
-    display: none;
-  }
 
   #container {
     width: 100%;
@@ -520,9 +491,11 @@ body {
   justify-content: center;
 }
 
+.sortButtons {
+  display: flex;
+  justify-content: center;
 
- 
-
-
-
-
+  .sortButtons-main {
+    margin: 10px;
+  }
+}

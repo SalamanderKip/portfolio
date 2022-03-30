@@ -21,13 +21,11 @@ const Navbar = () => {
                 <nav id="main-nav">
                     <img id='logo' src={logo} alt='Logo'></img>
                     <div id='mobile-menu'>
-                        <a href="#" id='mobile-menu-opener' className={navToggle ? 'opened' : 'closed'} onClick={() => setNavToggle(navToggle ? false : true)}><i className='fas fa-bars'></i></a>
-
+                        <button id='mobile-menu-opener' className={navToggle ? 'opened' : 'closed'} onClick={() => setNavToggle(navToggle ? false : true)}><i className='fas fa-bars'></i></button>
                     </div>
-
                 </nav>
 
-                <nav >
+                <nav id="alt-nav">
                     <ul id='mobile-list' className={navToggle ? 'opened' : 'closed'}>
                         <li className='item-nav'><NavLink to='/'>Home</NavLink></li>
                         <li className='item-nav'><NavLink to='/contact'>Contact</NavLink></li>
