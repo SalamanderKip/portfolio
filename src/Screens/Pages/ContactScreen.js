@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../assets/contact.css'
+import '../../assets/contact.scss'
 // import '../../components/Navbar.js'
 
 const ContactScreen = () => {
@@ -34,27 +34,22 @@ const ContactScreen = () => {
             {/* <header>
                     <Navbar />
                 </header> */}
-            <h1>Contact</h1>
             <div className="container">
                 <form action="#" onSubmit={handleSubmit}>
 
-                    <label htmlFor="fname">Voornaam</label>
                     <input type="text" id="fname" name="Voornaam" placeholder="Jou naam"
                         onChange={(e) => setVoornaam(e.target.value)} />
 
-                    <label htmlFor="lname">Achternaam</label>
                     <input type="text" id="lname" name="Achternaam" placeholder="Jou achternaam"
                         onChange={(e) => setAchternaam(e.target.value)} />
 
-                    <label htmlFor="lname">Email</label>
                     <input type="text" id="lname" name="Email" placeholder="Jou email"
                         onChange={(e) => setEmail(e.target.value)} />
 
-                    <label htmlFor="subject">messages</label>
                     <textarea id="subject" name="messages" placeholder="Typ hier je bericht" style={{ height: "200px" }}
                         onChange={(e) => setMessage(e.target.value)} />
 
-                    <input type="submit" value={status} />
+                    <input className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded' type="submit" value={status} />
                 </form>
             </div>
         </div>

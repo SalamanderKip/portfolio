@@ -5,7 +5,7 @@ export const EmailSocials = () => {
     return (
         <div className='socialsEmail'>
             <div className='socialEmailWrapper'>
-                <a href='mailto:bosmaarten@info.nl'>bosmaarten@info.nl</a>
+                <a href='mailto:info@bosmaarten.nl'>info@bosmaarten.nl</a>
             </div>
         </div>
     )

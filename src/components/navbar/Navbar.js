@@ -14,22 +14,26 @@ import logo from '../../assets/img/LogoPortfoliow512.png';
 
 const Navbar = () => {
     const [navToggle, setNavToggle] = useState(false);
-    console.log(navToggle);
+    // console.log(navToggle);
     return (
         <>
             <BrowserRouter>
-                <nav>
+                <nav id="main-nav">
                     <img id='logo' src={logo} alt='Logo'></img>
                     <div id='mobile-menu'>
-                        <a href="#" id='mobile-menu-opener' className={navToggle ? 'opened' : 'closed'} onClick={() => setNavToggle(navToggle ? false : true)}>menu</a>
-                        <ul className={navToggle ? 'opened' : 'closed'}>
-                            <li className='item-nav'><NavLink to='/'>Home</NavLink></li>
-                            <li className='item-nav'><NavLink to='/contact'>Contact</NavLink></li>
-                            <li className='item-nav'><Link to='/#aboutme'>About</Link></li>
-                            <li className='item-nav'><Link to='/#projects'>Projects</Link></li>
-                        </ul>
+                        <a href="#" id='mobile-menu-opener' className={navToggle ? 'opened' : 'closed'} onClick={() => setNavToggle(navToggle ? false : true)}><i className='fas fa-bars'></i></a>
+
                     </div>
 
+                </nav>
+
+                <nav >
+                    <ul id='mobile-list' className={navToggle ? 'opened' : 'closed'}>
+                        <li className='item-nav'><NavLink to='/'>Home</NavLink></li>
+                        <li className='item-nav'><NavLink to='/contact'>Contact</NavLink></li>
+                        <li className='item-nav'><Link to='/#aboutme'>About</Link></li>
+                        <li className='item-nav'><Link to='/#projects'>Projects</Link></li>
+                    </ul>
                 </nav>
                 <div className='content'>
                     <Routes>
